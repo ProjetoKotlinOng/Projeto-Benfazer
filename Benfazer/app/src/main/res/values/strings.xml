@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Benfazer</string>
+    <string name="nome_da_ong">Nome da Ong</string>
+    <string name="descricao_da_atividade">Descrição da atividade</string>
+    <string name="cnpj">CNPJ</string>
+    <string name="dados_bancarios">Dados bancários</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="valor_a_arrecadar">Valor a arrecadar</string>
+</resources>
