@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="30dp"
+    android:padding="20dp"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ImageOng"
+            android:layout_width="match_parent"
+            android:layout_height="286dp"
+            android:layout_margin="10dp"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/_93704_4976344931994_63964130_n_2" />
+
+        <TextView
+            android:id="@+id/NomeOng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="#515050"
+            android:textSize="30sp"
+            tools:text="Nome da Ong" />
+
+        <TextView
+            android:id="@+id/Descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="#515050"
+            android:textSize="28sp"
+            tools:text="Descrição" />
+
+        <Button
+            android:id="@+id/DoarButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#90CAF9"
+            android:text="@string/doar"
+            android:textSize="20sp"
+            app:cornerRadius="20dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

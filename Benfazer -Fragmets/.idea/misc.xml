@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Danyb/Downloads/Fragments-main/Fragments-main/app/src/main/res/layout/card_layout.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Danyb/Downloads/Fragments-main/Fragments-main/app/src/main/res/layout/fragment_formulario.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/BenfazerProject/app/src/main/res/layout/activity_main.xml" value="0.21" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/BenfazerProject/app/src/main/res/layout/card_layout.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/BenfazerProject/app/src/main/res/layout/fragment_formulario.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/BenfazerProject/app/src/main/res/layout/fragment_list.xml" value="0.21" />
+        <entry key="..\:/Users/usuario/Desktop/Projeto-Benfazer/Benfazer -Fragmets/app/src/main/res/layout/card_layout.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/usuario/Desktop/layout-test/app/src/main/res/layout/card_layout.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/usuario/Desktop/layout-test/app/src/main/res/layout/fragment_formulario.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
