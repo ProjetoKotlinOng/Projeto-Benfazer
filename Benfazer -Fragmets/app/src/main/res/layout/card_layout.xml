@@ -17,11 +17,8 @@
         <ImageView
             android:id="@+id/ImageOng"
             android:layout_width="match_parent"
-            android:layout_height="286dp"
-            android:layout_margin="10dp"
-            android:padding="20dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/_93704_4976344931994_63964130_n_2" />
+            android:layout_height="260dp"
+            app:srcCompat="@drawable/criancas" />
 
         <TextView
             android:id="@+id/NomeOng"
@@ -54,5 +51,6 @@
             android:text="@string/doar"
             android:textSize="20sp"
             app:cornerRadius="20dp" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

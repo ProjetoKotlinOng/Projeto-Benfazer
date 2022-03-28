@@ -3,11 +3,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="floatingActionButton">Adicionar Nova Tarefa</string>
     <string name="insira_o_link_da_imagem">Insira o link da imagem</string>
-    <string name="dados_bancarios">dados bancarios</string>
-    <string name="cnpj">cnpj</string>
-    <string name="cadastrar">cadastrar</string>
-    <string name="valor_a_arrecadar">valor a arrecadar</string>
-    <string name="descricao_da_atividade">descricao da atividade</string>
-    <string name="nome_da_ong">nome da ong</string>
+    <string name="dados_bancarios">Dados bancarios</string>
+    <string name="cnpj">CNPJ</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="valor_a_arrecadar">Valor a arrecadar</string>
+    <string name="descricao_da_atividade">Descricao da atividade</string>
+    <string name="nome_da_ong">Nome da ong</string>
     <string name="doar">Doar</string>
 </resources>
