@@ -8,45 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/NOng"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="#90CAF9"
-        android:ems="10"
-        android:fontFamily="@font/lato_bold"
-        android:hint="@string/nome_da_ong"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textColor="@color/black"
-        android:textColorHint="#78909C"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ImOng" />
-
-    <EditText
-        android:id="@+id/DescAtiv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="#90CAF9"
-        android:ems="10"
-        android:fontFamily="@font/lato_bold"
-        android:hint="@string/descricao_da_atividade"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cnpj" />
-
-    <EditText
-        android:id="@+id/VArrecadar"
+        android:id="@+id/editValor"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -61,7 +23,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DescAtiv" />
+        app:layout_constraintTop_toBottomOf="@+id/editQuant" />
+
+    <EditText
+        android:id="@+id/editProd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#90CAF9"
+        android:ems="10"
+        android:fontFamily="@font/lato_bold"
+        android:hint="Nome do Produto"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="#78909C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#90CAF9"
+        android:ems="10"
+        android:fontFamily="@font/lato_bold"
+        android:hint="@string/descricao_da_atividade"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editProd" />
+
+    <EditText
+        android:id="@+id/editCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#90CAF9"
+        android:ems="10"
+        android:fontFamily="@font/lato_bold"
+        android:hint="Categoria"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editValor" />
 
     <Spinner
         android:id="@+id/spinnerLista"
@@ -76,14 +94,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Banco" />
+        app:layout_constraintTop_toBottomOf="@+id/editCategoria" />
 
     <Button
         android:id="@+id/buttonCadastrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="#90CAF9"
         android:fontFamily="@font/lato_bold"
@@ -96,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerLista" />
 
     <EditText
-        android:id="@+id/cnpj"
+        android:id="@+id/editQuant"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -105,36 +123,20 @@
         android:backgroundTint="#90CAF9"
         android:ems="10"
         android:fontFamily="@font/lato_bold"
-        android:hint="@string/cnpj"
+        android:hint="Quantidade"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NOng" />
+        app:layout_constraintTop_toBottomOf="@+id/editImage" />
 
     <EditText
-        android:id="@+id/Banco"
+        android:id="@+id/editImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="#90CAF9"
-        android:ems="10"
-        android:fontFamily="@font/lato_bold"
-        android:hint="@string/dados_bancarios"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/VArrecadar" />
-
-    <EditText
-        android:id="@+id/ImOng"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#90CAF9"
         android:ems="10"
@@ -146,6 +148,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/editDesc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,54 +6,36 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.generation.benfazerproject.adapter.Adapter
-import com.generation.benfazerproject.modelo.Post
+import com.generation.benfazerproject.databinding.FragmentListBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ListFragment : Fragment() {
+    private val mainViewModel: MainViewModel by activityViewModels()
+
+    private lateinit var binding: FragmentListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-        val listPost = mutableListOf(
-            Post(
-                "Adicionar o link",
-                "Sonhar Acordado",
-                "Atendemos crianças em situação de vunerabilidade"
-            ),
-                    Post (
-                    "Adicionar o link",
-            "Gás",
-            "Atendemos pessoas e animais em situação de rua"
-        ),
-            Post(
-                "Adicionar o link",
-                "Teto",
-                "Ajuda na construção de casas para famílias carentes"
-            )
-        )
-        val recyclerPost = view.findViewById<RecyclerView>(R.id.recyclerPost)
-
-        val floatingActionButton= view.findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
         val adapter = Adapter()
 
-        recyclerPost.layoutManager = LinearLayoutManager(context)
+        binding.recyclerProduto.layoutManager = LinearLayoutManager(context)
 
-        recyclerPost.adapter = adapter
+        binding.recyclerProduto.adapter = adapter
 
-        recyclerPost.setHasFixedSize(true)
+        binding.recyclerProduto.setHasFixedSize(true)
 
-        adapter.setList(listPost)
-
-        floatingActionButton.setOnClickListener {
+        binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_formularioFragment)
         }
 

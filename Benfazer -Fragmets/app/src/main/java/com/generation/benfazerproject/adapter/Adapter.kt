@@ -8,37 +8,45 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.generation.benfazerproject.R
-import com.generation.benfazerproject.modelo.Post
+import com.generation.benfazerproject.modelo.Produto
 
-class Adapter : RecyclerView.Adapter<Adapter.PostViewHolder>() {
-    private var list = emptyList<Post>()
+class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
+    private var list = emptyList<Produto>()
 
-    class PostViewHolder(View: View) : RecyclerView.ViewHolder(View) {
+    class ProdutoViewHolder(View: View) : RecyclerView.ViewHolder(View) {
+        val textProd = View.findViewById<TextView>(R.id.textProd)
+        val textQuant = View.findViewById<TextView>(R.id.textQuant)
+        val textDesc = View.findViewById<TextView>(R.id.textDesc)
+        val textValor = View.findViewById<TextView>(R.id.textValor)
+        val textCategoria = View.findViewById<TextView>(R.id.textCategoria)
         val ImageOng = View.findViewById<ImageView>(R.id.ImageOng)
-        val NomeOng = View.findViewById<TextView>(R.id.NomeOng)
-        val Descricao = View.findViewById<TextView>(R.id.Descricao)
-        val DoarButton = View.findViewById<Button>(R.id.DoarButton)
+        val ComprarButton = View.findViewById<Button>(R.id.ComprarButton)
+
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProdutoViewHolder {
         val layout =
             LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
 
-        return PostViewHolder(layout)
+        return ProdutoViewHolder(layout)
     }
 
-    override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
-        val post = list[position]
-        holder.NomeOng.text = post.nome
-        holder.Descricao.text = post.descricao
+    override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
+        val produto = list[position]
+        holder.textProd.text = produto.nomeMarca
+        holder.textDesc.text = produto.descricao
+        holder.textValor.text = produto.valor.toString()
+        holder.textQuant.text = produto.quantidade.toString()
+        holder.textCategoria.text = produto.categoria.descricao
+
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
 
-    fun setList(listPost: MutableList<Post>) {
-        list = listPost
+    fun setList(listProduto: MutableList<Produto>) {
+        list = listProduto
         notifyDataSetChanged()
     }
 }

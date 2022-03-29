@@ -21,7 +21,7 @@
             app:srcCompat="@drawable/criancas" />
 
         <TextView
-            android:id="@+id/NomeOng"
+            android:id="@+id/textProd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -29,10 +29,10 @@
             android:textAlignment="center"
             android:textColor="#515050"
             android:textSize="30sp"
-            tools:text="Nome da Ong" />
+            tools:text="Produto" />
 
         <TextView
-            android:id="@+id/Descricao"
+            android:id="@+id/textDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -42,13 +42,46 @@
             android:textSize="28sp"
             tools:text="Descrição" />
 
+        <TextView
+            android:id="@+id/textQuant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="#515050"
+            android:textSize="28sp"
+            tools:text="Quantidade" />
+
+        <TextView
+            android:id="@+id/textValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="#515050"
+            android:textSize="28sp"
+            tools:text="Valor" />
+
+        <TextView
+            android:id="@+id/textCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:textAlignment="center"
+            android:textColor="#515050"
+            android:textSize="28sp"
+            tools:text="Categoria" />
+
         <Button
-            android:id="@+id/DoarButton"
+            android:id="@+id/ComprarButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#90CAF9"
-            android:text="@string/doar"
+            android:text="Comprar"
             android:textSize="20sp"
             app:cornerRadius="20dp" />
 
