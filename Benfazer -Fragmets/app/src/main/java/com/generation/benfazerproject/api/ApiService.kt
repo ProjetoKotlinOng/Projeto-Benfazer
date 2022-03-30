@@ -12,12 +12,12 @@ interface ApiService {
     @GET("categoria")
     suspend fun listCategoria(): Response<List<Categoria>>
 
-    @POST("produto")
+    @POST("produtos")
     suspend fun addProduto(
     @Body produto: Produto
 ): Response<Produto>
 
-    @GET("Produto")
+    @GET("produtos")
     suspend fun listProduto(): Response<List<Produto>>
 
 

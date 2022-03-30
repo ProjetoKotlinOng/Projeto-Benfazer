@@ -35,25 +35,7 @@ class FormularioFragment : Fragment() {
         }
 
         binding.buttonCadastrar.setOnClickListener {
-
-
-            val editProdText = binding.editProd.text.toString()
-           // val editImageText = binding.editImage.text.toString()
-            val editDescText = binding.editDesc.text.toString()
-            val editQuantText = binding.editQuant.text.toString().toInt()
-            val editValorText = binding.editValor.text.toString().toInt()
-
-            if (validarCampos(editDescText, editProdText, editQuantText, editValorText)) {
-                val toast =
-                    Toast.makeText(context, "Preencher os campos obrigatorios", Toast.LENGTH_LONG)
-                toast.show()
-            } else {
-                findNavController().navigate(R.id.action_formularioFragment_to_listFragment)
-                Toast.makeText(context, "Cadastro realizado com sucesso", Toast.LENGTH_LONG).show()
-            }
-        }
-        binding.buttonCadastrar.setOnClickListener {
-            inserirNoBanco()
+            this.inserirNoBanco()
         }
 
         return binding.root
@@ -84,14 +66,14 @@ class FormularioFragment : Fragment() {
     fun validarCampos(
         editProd: String,
         editDesc: String,
-        editValor: Int,
-        editQuant: Int,
+        editValor: String,
+        editQuant: String,
     ): Boolean {
         return !(
                 (editProd == "" || editProd.length <0  || editProd.length>255) ||
         (editDesc == "" || editDesc.length <0 || editDesc.length > 1000) ||
-        (editValor == 0) ||
-                (editQuant == 0)
+        (editValor == "") ||
+                (editQuant == "")
                 )
     }
 
@@ -99,17 +81,17 @@ class FormularioFragment : Fragment() {
 
         val prod = binding.editProd.text.toString()
         val desc = binding.editDesc.text.toString()
-        val quant = binding.editQuant.text.toString().toInt()
-        val valor = binding.editValor.text.toString().toInt()
+        val quant = binding.editQuant.text.toString()
+        val valor = binding.editValor.text.toString()
         val image = binding.editImage.text.toString()
         val categoria = Categoria(categoriaSelecionada,null,null)
 
         if(validarCampos(prod, desc,valor,quant,)){
-            val produto = Produto(0,prod,desc,image,quant,valor,categoria)
+            val produto = Produto(0,prod,desc,image,quant.toInt(),valor.toDouble(),categoria)
 
             mainViewModel.addProduto(produto)
-            Toast.makeText(context,"Tarefa Salva!",Toast.LENGTH_LONG).show()
-            findNavController().navigate(R.id.action_listFragment_to_formularioFragment)}
+            Toast.makeText(context,"Produto cadastrado!",Toast.LENGTH_LONG).show()
+            findNavController().navigate(R.id.action_formularioFragment_to_listFragment)}
 
         else{
             Toast.makeText(context,"Preencha os campos corretamente!",Toast.LENGTH_LONG).show()

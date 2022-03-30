@@ -39,7 +39,7 @@ class ListFragment : Fragment() {
         }
 
         mainViewModel.myProdutoResponse.observe(viewLifecycleOwner) { response ->
-            if (response != null) {
+            if (response.body() != null) {
                 adapter.setList(response.body()!!)
             }
         }

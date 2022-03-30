@@ -6,7 +6,7 @@ data class Produto(
     var descricao: String,
     var imagem: String,
     var quantidade: Int,
-    var valor: Int,
+    var valor: Double,
     var categoria: Categoria
 ) {
 }

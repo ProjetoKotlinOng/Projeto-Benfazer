@@ -8,24 +8,6 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editValor"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="#90CAF9"
-        android:ems="10"
-        android:fontFamily="@font/lato_bold"
-        android:hint="@string/valor_a_arrecadar"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editQuant" />
-
-    <EditText
         android:id="@+id/editProd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -90,6 +72,7 @@
         android:layout_marginEnd="32dp"
         android:backgroundTint="#90CAF9"
         android:entries="@android:array/emailAddressTypes"
+        android:foregroundTint="#90CAF9"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -114,24 +97,6 @@
         app:layout_constraintTop_toBottomOf="@+id/spinnerLista" />
 
     <EditText
-        android:id="@+id/editQuant"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:backgroundTint="#90CAF9"
-        android:ems="10"
-        android:fontFamily="@font/lato_bold"
-        android:hint="Quantidade"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editImage" />
-
-    <EditText
         android:id="@+id/editImage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -149,5 +114,35 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editDesc" />
+
+    <EditText
+        android:id="@+id/editQuant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#90CAF9"
+        android:ems="10"
+        android:hint="Quantidade"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editImage" />
+
+    <EditText
+        android:id="@+id/editValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#90CAF9"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editQuant" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
