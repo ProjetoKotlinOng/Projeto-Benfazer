@@ -11,7 +11,7 @@ import com.generation.benfazerproject.R
 import com.generation.benfazerproject.modelo.Produto
 
 class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
-    private var list = emptyList<Produto>()
+    private var listProduto = emptyList<Produto>()
 
     class ProdutoViewHolder(View: View) : RecyclerView.ViewHolder(View) {
         val textProd = View.findViewById<TextView>(R.id.textProd)
@@ -32,7 +32,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ProdutoViewHolder, position: Int) {
-        val produto = list[position]
+        val produto = listProduto[position]
         holder.textProd.text = produto.nomeMarca
         holder.textDesc.text = produto.descricao
         holder.textValor.text = produto.valor.toString()
@@ -42,11 +42,11 @@ class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return listProduto.size
     }
 
-    fun setList(listProduto: MutableList<Produto>) {
-        list = listProduto
+    fun setList(lista: List<Produto>) {
+        listProduto = lista
         notifyDataSetChanged()
     }
 }

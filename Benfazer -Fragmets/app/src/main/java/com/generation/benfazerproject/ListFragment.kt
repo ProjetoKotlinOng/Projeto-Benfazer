@@ -5,14 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.generation.benfazerproject.adapter.Adapter
 import com.generation.benfazerproject.databinding.FragmentListBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ListFragment : Fragment() {
@@ -24,6 +21,8 @@ class ListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        mainViewModel.listProduto()
 
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
@@ -39,6 +38,12 @@ class ListFragment : Fragment() {
             findNavController().navigate(R.id.action_listFragment_to_formularioFragment)
         }
 
-        return view
+        mainViewModel.myProdutoResponse.observe(viewLifecycleOwner) { response ->
+            if (response != null) {
+                adapter.setList(response.body()!!)
+            }
+        }
+
+        return binding.root
     }
 }
