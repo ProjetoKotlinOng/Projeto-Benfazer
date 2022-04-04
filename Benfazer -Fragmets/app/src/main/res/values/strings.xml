@@ -10,4 +10,9 @@
     <string name="descricao_da_atividade">Descricao da atividade</string>
     <string name="nome_da_ong">Nome da ong</string>
     <string name="doar">Doar</string>
+    <string name="valor">Valor</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="nome_do_produto">Nome do Produto</string>
+    <string name="Editcadastrar">Editar Cadastrao</string>
+    <string name="comprar">Comprar</string>
 </resources>

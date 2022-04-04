@@ -17,9 +17,8 @@ import com.generation.benfazerproject.modelo.Produto
 class FormularioFragment : Fragment() {
 
     private lateinit var binding: FragmentFormularioBinding
-
     private var categoriaSelecionada = 0L
-
+    private var produtoSelecionado: Produto? = null
     private val mainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -28,6 +27,8 @@ class FormularioFragment : Fragment() {
     ): View? {
 
         binding = FragmentFormularioBinding.inflate(layoutInflater, container, false)
+
+        carregarDados()
 
         mainViewModel.myCategoriaResponse.observe(viewLifecycleOwner) { response ->
             Log.d("Requisição", response.body().toString())
@@ -87,18 +88,56 @@ class FormularioFragment : Fragment() {
         val categoria = Categoria(categoriaSelecionada,null,null)
 
         if(validarCampos(prod, desc,valor,quant,)){
-            val produto = Produto(0,prod,desc,image,quant.toInt(),valor.toDouble(),categoria)
 
-            mainViewModel.addProduto(produto)
+            if (produtoSelecionado==null) {
+
+                val produto = Produto(0, prod, desc, image, quant.toInt(), valor.toDouble(),categoria)
+                mainViewModel.addProduto(produto)
+            }else{
+
+                val produto = Produto(
+
+                produtoSelecionado?.id!!,prod,desc,image,quant.toInt(),valor.toDouble(), categoria)
+                mainViewModel.updateProduto(produto)
+            }
+
             Toast.makeText(context,"Produto cadastrado!",Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_formularioFragment_to_listFragment)}
 
         else{
             Toast.makeText(context,"Preencha os campos corretamente!",Toast.LENGTH_LONG).show()
         }
+    }
+
+        private fun carregarDados () {
+            produtoSelecionado = mainViewModel.produtoSelecionado
+
+            if (produtoSelecionado!= null){
+
+                binding.editProd.setText(produtoSelecionado?.nomeMarca)
+                binding.editDesc.setText(produtoSelecionado?.descricao)
+                binding.editQuant.setText(produtoSelecionado?.quantidade.toString())
+                binding.editValor.setText(produtoSelecionado?.valor.toString())
+                binding.editImage.setText(produtoSelecionado?.imagem)
+            } else{
+
+                binding.editProd.text = null
+                binding.editDesc.text = null
+                binding.editQuant.text = null
+                binding.editValor.text = null
+                binding.editImage.text = null
+
+            }
+
+        }
 
     }
-}
+
+
+
+
+
+
 
 
 

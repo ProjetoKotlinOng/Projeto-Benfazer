@@ -4,13 +4,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.generation.benfazerproject.MainViewModel
 import com.generation.benfazerproject.R
 import com.generation.benfazerproject.modelo.Produto
 
-class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
+class Adapter (
+    private val taskItemClickListener: TaskItemClickListener,
+    private val mainViewModel: MainViewModel
+
+        ) : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
     private var listProduto = emptyList<Produto>()
 
     class ProdutoViewHolder(View: View) : RecyclerView.ViewHolder(View) {
@@ -21,6 +27,7 @@ class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
         val textCategoria = View.findViewById<TextView>(R.id.textCategoria)
         val ImageOng = View.findViewById<ImageView>(R.id.ImageOng)
         val ComprarButton = View.findViewById<Button>(R.id.ComprarButton)
+        val editButton = View.findViewById<ImageButton>(R.id.editButton)
 
     }
 
@@ -38,8 +45,14 @@ class Adapter : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
         holder.textValor.text = produto.valor.toString()
         holder.textQuant.text = produto.quantidade.toString()
         holder.textCategoria.text = produto.categoria.descricao
+        holder. itemView.setOnClickListener {
+            taskItemClickListener.onTaskClicked(produto)
+        }
+        holder.editButton.setOnClickListener {
+            taskItemClickListener.onTaskClicked(produto)
+        }
+        }
 
-    }
 
     override fun getItemCount(): Int {
         return listProduto.size
