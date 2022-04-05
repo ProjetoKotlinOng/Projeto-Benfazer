@@ -13,6 +13,6 @@
     <string name="valor">Valor</string>
     <string name="quantidade">Quantidade</string>
     <string name="nome_do_produto">Nome do Produto</string>
-    <string name="Editcadastrar">Editar Cadastrao</string>
-    <string name="comprar">Comprar</string>
+    <string name="Editcadastrar">Editar Cadastro</string>
+    <string name="Delete">Deletar</string>
 </resources>

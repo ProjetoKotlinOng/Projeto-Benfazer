@@ -5,34 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="30dp"
-    android:padding="20dp"
+    android:padding="30dp"
     app:cardCornerRadius="30dp"
     app:cardElevation="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textProd"
-                android:layout_width="357dp"
+                android:layout_width="339dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:fontFamily="@font/lato_bold"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"
-                android:textColor="#515050"
+                android:textColor="#528BA5"
                 android:textSize="30sp"
                 tools:text="Produto" />
 
             <ImageButton
                 android:id="@+id/editButton"
-                android:layout_width="40dp"
+                android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:contentDescription="@string/Editcadastrar"
@@ -43,62 +43,63 @@
 
         <ImageView
             android:id="@+id/ImageOng"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="260dp"
-            app:srcCompat="@drawable/criancas"
-            android:contentDescription="TODO" />
+            android:layout_weight="1"
+            app:srcCompat="@drawable/alime_azul" />
 
         <TextView
             android:id="@+id/textDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/lato_bold"
-            android:textAlignment="center"
-            android:textColor="#515050"
-            android:textSize="28sp"
-            tools:text="Descrição" />
-
-        <TextView
-            android:id="@+id/textQuant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/lato_bold"
-            android:textAlignment="center"
-            android:textColor="#515050"
-            android:textSize="28sp"
-            tools:text="Quantidade" />
-
-        <TextView
-            android:id="@+id/textValor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:fontFamily="@font/lato_bold"
-            android:textAlignment="center"
-            android:textColor="#515050"
-            android:textSize="28sp"
-            tools:text="Valor" />
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="viewStart"
+            android:textColor="#528BA5"
+            android:textSize="24sp"
+            tools:text="Descrição: " />
 
         <TextView
             android:id="@+id/textCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="viewStart"
+            android:textColor="#528BA5"
+            android:textSize="24sp"
+            tools:text="Categoria: " />
+
+        <TextView
+            android:id="@+id/textQuant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="viewEnd"
+            android:textColor="#528BA5"
+            android:textSize="22sp"
+            tools:text="qt" />
+
+        <TextView
+            android:id="@+id/textValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-condensed"
             android:textAlignment="center"
-            android:textColor="#515050"
-            android:textSize="28sp"
-            tools:text="Categoria" />
+            android:textColor="#528BA5"
+            android:textSize="30sp"
+            tools:text="R$" />
 
         <Button
-            android:id="@+id/ComprarButton"
+            android:id="@+id/DelButton"
+            style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:backgroundTint="#90CAF9"
-            android:text="@string/comprar"
+            android:text="@string/Delete"
             android:textColor="#546E7A"
             android:textSize="20sp"
             app:cornerRadius="20dp" />

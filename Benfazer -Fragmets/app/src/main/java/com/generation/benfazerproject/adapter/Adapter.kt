@@ -26,7 +26,7 @@ class Adapter (
         val textValor = View.findViewById<TextView>(R.id.textValor)
         val textCategoria = View.findViewById<TextView>(R.id.textCategoria)
         val ImageOng = View.findViewById<ImageView>(R.id.ImageOng)
-        val ComprarButton = View.findViewById<Button>(R.id.ComprarButton)
+        val DelButton = View.findViewById<Button>(R.id.DelButton)
         val editButton = View.findViewById<ImageButton>(R.id.editButton)
 
     }
@@ -50,6 +50,9 @@ class Adapter (
         }
         holder.editButton.setOnClickListener {
             taskItemClickListener.onTaskClicked(produto)
+        }
+        holder.DelButton.setOnClickListener {
+            mainViewModel.deleteProduto(produto.id)
         }
         }
 
