@@ -1,5 +1,7 @@
 package com.generation.benfazerproject
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dagger.hilt.android.AndroidEntryPoint
@@ -12,4 +14,5 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Main)
         setContentView(R.layout.activity_main)
     }
+
 }

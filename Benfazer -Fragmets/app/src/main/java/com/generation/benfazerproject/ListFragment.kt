@@ -29,7 +29,7 @@ class ListFragment : Fragment(), TaskItemClickListener {
 
         binding = FragmentListBinding.inflate(layoutInflater, container, false)
 
-        val adapter = Adapter(this,mainViewModel)
+        val adapter = Adapter(this,mainViewModel,context)
 
         binding.recyclerProduto.layoutManager = LinearLayoutManager(context)
 

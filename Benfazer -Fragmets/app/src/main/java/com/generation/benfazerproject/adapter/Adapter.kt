@@ -1,5 +1,8 @@
 package com.generation.benfazerproject.adapter
 
+import android.app.AlertDialog
+import android.content.Context
+import android.content.DialogInterface
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,11 +15,13 @@ import com.generation.benfazerproject.MainViewModel
 import com.generation.benfazerproject.R
 import com.generation.benfazerproject.modelo.Produto
 
-class Adapter (
+class Adapter(
     private val taskItemClickListener: TaskItemClickListener,
-    private val mainViewModel: MainViewModel
+    private val mainViewModel: MainViewModel,
+    private val context: Context?
 
-        ) : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
+
+) : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
     private var listProduto = emptyList<Produto>()
 
     class ProdutoViewHolder(View: View) : RecyclerView.ViewHolder(View) {
@@ -45,16 +50,16 @@ class Adapter (
         holder.textValor.text = produto.valor.toString()
         holder.textQuant.text = produto.quantidade.toString()
         holder.textCategoria.text = produto.categoria.descricao
-        holder. itemView.setOnClickListener {
+        holder.itemView.setOnClickListener {
             taskItemClickListener.onTaskClicked(produto)
         }
         holder.editButton.setOnClickListener {
             taskItemClickListener.onTaskClicked(produto)
         }
         holder.DelButton.setOnClickListener {
-            mainViewModel.deleteProduto(produto.id)
+            deleteShow(produto.id)
         }
-        }
+    }
 
 
     override fun getItemCount(): Int {
@@ -65,4 +70,21 @@ class Adapter (
         listProduto = lista
         notifyDataSetChanged()
     }
+
+    fun deleteShow(id: Long) {
+
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Excluir")
+        builder.setMessage("Deseja excluir o registro?")
+        builder.setPositiveButton("Sim") { dialogInterface: DialogInterface, i: Int ->
+            mainViewModel.deleteProduto(id)
+        }
+        builder.setNegativeButton("Não") { _dialogInterface: DialogInterface, i: Int ->
+        }
+        builder.show()
+
+    }
+
+
 }
+
