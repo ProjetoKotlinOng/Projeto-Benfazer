@@ -11,6 +11,7 @@ import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.generation.benfazerproject.MainViewModel
 import com.generation.benfazerproject.R
 import com.generation.benfazerproject.modelo.Produto
@@ -24,14 +25,15 @@ class Adapter(
 ) : RecyclerView.Adapter<Adapter.ProdutoViewHolder>() {
     private var listProduto = emptyList<Produto>()
 
+    // Referenciando o Card Layout
     class ProdutoViewHolder(View: View) : RecyclerView.ViewHolder(View) {
         val textProd = View.findViewById<TextView>(R.id.textProd)
         val textQuant = View.findViewById<TextView>(R.id.textQuant)
         val textDesc = View.findViewById<TextView>(R.id.textDesc)
         val textValor = View.findViewById<TextView>(R.id.textValor)
         val textCategoria = View.findViewById<TextView>(R.id.textCategoria)
-        val ImageOng = View.findViewById<ImageView>(R.id.ImageOng)
-        val DelButton = View.findViewById<Button>(R.id.DelButton)
+        val Image = View.findViewById<ImageView>(R.id.ImageOng)
+        val DelButton = View.findViewById<ImageButton>(R.id.DelButton)
         val editButton = View.findViewById<ImageButton>(R.id.editButton)
 
     }
@@ -50,15 +52,22 @@ class Adapter(
         holder.textValor.text = produto.valor.toString()
         holder.textQuant.text = produto.quantidade.toString()
         holder.textCategoria.text = produto.categoria.descricao
-        holder.itemView.setOnClickListener {
-            taskItemClickListener.onTaskClicked(produto)
-        }
+
+        // Inserindo Link da Imagem
+        Glide.with(context!!)
+            .load(produto.imagem)
+            .placeholder(android.R.drawable.ic_menu_report_image)
+            .into(holder.Image)
+
+        // O Button de editar
         holder.editButton.setOnClickListener {
             taskItemClickListener.onTaskClicked(produto)
         }
+        //  O Button deletar
         holder.DelButton.setOnClickListener {
             deleteShow(produto.id)
         }
+
     }
 
 

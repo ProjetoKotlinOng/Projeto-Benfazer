@@ -21,7 +21,7 @@
 
             <TextView
                 android:id="@+id/textProd"
-                android:layout_width="339dp"
+                android:layout_width="263dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="sans-serif-condensed"
@@ -32,21 +32,30 @@
 
             <ImageButton
                 android:id="@+id/editButton"
-                android:layout_width="48dp"
+                android:layout_width="69dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:contentDescription="@string/Editcadastrar"
                 android:minHeight="48dp"
                 app:srcCompat="@drawable/ic_baseline_edit_24" />
 
+            <ImageButton
+                android:id="@+id/DelButton"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/Delete"
+                android:minHeight="48dp"
+                app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
+
         </LinearLayout>
 
         <ImageView
             android:id="@+id/ImageOng"
-            android:layout_width="wrap_content"
-            android:layout_height="260dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/alime_azul" />
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/textDesc"
@@ -91,18 +100,6 @@
             android:textColor="#528BA5"
             android:textSize="30sp"
             tools:text="R$" />
-
-        <Button
-            android:id="@+id/DelButton"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:backgroundTint="#90CAF9"
-            android:text="@string/Delete"
-            android:textColor="#546E7A"
-            android:textSize="20sp"
-            app:cornerRadius="20dp" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
