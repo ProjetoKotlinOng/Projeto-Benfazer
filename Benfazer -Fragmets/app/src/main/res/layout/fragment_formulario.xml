@@ -4,16 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#90CAF9"
     tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tela_form" />
 
     <EditText
         android:id="@+id/editProd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:backgroundTint="#90CAF9"
         android:ems="10"
         android:fontFamily="@font/lato_bold"
@@ -25,15 +35,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editDesc"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:autofillHints=""
         android:backgroundTint="#90CAF9"
@@ -53,7 +62,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#90CAF9"
         android:entries="@android:array/emailAddressTypes"
@@ -66,18 +75,20 @@
 
     <Button
         android:id="@+id/buttonCadastrar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="50dp"
         android:backgroundTint="#90CAF9"
+        android:elevation="50dp"
         android:fontFamily="@font/lato_bold"
         android:text="@string/cadastrar"
         android:textColor="#546E7A"
         android:textStyle="bold"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerLista" />
 
@@ -86,7 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:autofillHints=""
         android:backgroundTint="#90CAF9"
@@ -107,7 +118,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:autofillHints=""
         android:backgroundTint="#90CAF9"
@@ -125,7 +136,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         android:autofillHints=""
         android:backgroundTint="#90CAF9"
@@ -133,7 +144,7 @@
         android:hint="@string/valor"
         android:inputType="number"
         android:minHeight="48dp"
-        android:textColorHint="#0277BD"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editQuant" />

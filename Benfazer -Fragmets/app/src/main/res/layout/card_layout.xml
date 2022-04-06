@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="30dp"
-    android:padding="30dp"
-    app:cardCornerRadius="30dp"
-    app:cardElevation="30dp">
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="#00FFFFFF"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,7 +22,7 @@
 
             <TextView
                 android:id="@+id/textProd"
-                android:layout_width="263dp"
+                android:layout_width="237dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:fontFamily="sans-serif-condensed"
@@ -32,28 +33,31 @@
 
             <ImageButton
                 android:id="@+id/editButton"
-                android:layout_width="69dp"
+                android:layout_width="61dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:contentDescription="@string/Editcadastrar"
+                android:elevation="10dp"
                 android:minHeight="48dp"
                 app:srcCompat="@drawable/ic_baseline_edit_24" />
 
             <ImageButton
                 android:id="@+id/DelButton"
-                android:layout_width="82dp"
+                android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contentDescription="@string/Delete"
+                android:elevation="10dp"
                 android:minHeight="48dp"
-                app:srcCompat="@drawable/ic_baseline_delete_outline_24" />
+                app:srcCompat="@drawable/ic_baseline_delete_outline_24"
+                tools:ignore="ImageContrastCheck" />
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/ImageOng"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="369dp"
+            android:layout_height="156dp"
             android:layout_weight="1"
             android:scaleType="fitCenter" />
 
